@@ -1,28 +1,27 @@
 # Map Pins
 
-A lightweight map editor that runs in the browser from a local file. Load a map image, add
-your own icons, and place them as markers. Organise everything into layers. Save the result as
-a PNG, or as a single HTML file that opens the map in the same editor.
+A map editor that runs in the browser from a local file. Load a map image, add your own icons,
+place them as markers and sort them into layers. Save the result as a PNG, or as a single HTML
+file that opens the map in the same editor.
 
-No install, no server, no build step. Open `index.html` and start.
+It needs no install, server or build step. Open `index.html` to start.
 
 ## Features
 
-- **Map image.** Open any image as the map, and crop it in the editor.
-- **Custom icons.** Add icon images by picking files or dropping them on the window. Icons
-  that come as one sheet (an atlas) can be cut apart with the built-in atlas splitter.
-- **Markers.** Click to place the active icon. Drag to move. Each marker can carry a label
-  and its own size.
-- **Layers and groups.** Show or hide layers, drag them to reorder, and gather them into
-  groups. Each layer has its own label settings: show or hide, size, and offset.
-- **Image overlays.** Add images to a layer to cover whole sections of the map. They show
-  when the layer is on.
-- **Pencil and eraser.** Draw on the active layer. Each tool keeps its own size.
-- **Read and edit modes.** Read mode hides the sidebar and keeps panning, zooming, layer
-  toggles and drawing. Edit mode has everything.
-- **Import layers.** Copy chosen layers from another Map Pins project. If the two maps are
-  cropped differently, the offset between them is detected for you.
-- **Autosave.** Every change is kept in the browser until you save.
+- Open any image as the map and crop it in the editor.
+- Add icons by picking files or dropping them on the window. The atlas splitter cuts apart
+  icons that come as one sheet.
+- Click to place the active icon as a marker and drag to move it. Each marker can carry a
+  label and its own size.
+- Show, hide and reorder layers by dragging, and gather them into groups. Each layer has its
+  own label settings: show or hide, size and offset.
+- Add image overlays to a layer to cover sections of the map while the layer is on.
+- Draw on the active layer with the pencil and eraser. Each tool keeps its own size.
+- Read mode hides the sidebar and keeps panning, zooming, layer toggles and drawing. Edit mode
+  has everything.
+- Import chosen layers from another Map Pins project. If the two maps are cropped
+  differently, the editor detects the offset between them.
+- Every change autosaves in the browser until you save.
 
 ## Getting started
 
@@ -48,19 +47,19 @@ No install, no server, no build step. Open `index.html` and start.
 
 ## Saving
 
-- **Save** writes the current file. The first time, it asks where to save.
-- **Save As → HTML** writes one self-contained file holding the editor and your map. Anyone
-  can open it in a browser, with nothing else needed.
+- **Save** writes the current file, asking where the first time.
+- **Save As → HTML** writes one self-contained file holding the editor and your map. Any
+  browser opens it.
 - **Save As → PNG** writes a flat image of the map with visible layers, markers and labels.
 - **Open** loads a saved HTML file or a `.mappins.json` project.
 
 Saving straight to a file needs the File System Access API, which Chrome and Edge have.
-In Firefox, saves download the file instead.
+Firefox downloads the file instead.
 
 ## Keeping data in separate files
 
-A map can keep its data next to the editor instead of inside one HTML file, which suits
-version control. The page loads two data files before the editor:
+A map can keep its data in files next to the editor instead of inside one HTML file, which
+suits version control. The page loads two data files before the editor:
 
 ```html
 <script src="mymap.data.js"></script>
@@ -73,8 +72,8 @@ version control. The page loads two data files before the editor:
   hash of the content, so an unchanged image never shows up in a diff.
 
 In such a page, **Save** asks once for the folder holding the data files and rewrites both.
-Images are kept as data URLs because browsers refuse to let a page read pixels from images
-loaded off disk, which drawing, cropping and PNG export need.
+Images stay as data URLs because browsers won't let a page read pixels from images loaded off
+disk, and drawing, cropping and PNG export need those pixels.
 
 ## Files
 
