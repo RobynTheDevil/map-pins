@@ -1,4 +1,5 @@
 (function mapPins() {
+/* Map Pins. Copyright (c) 2026 Robyn. MIT License: https://opensource.org/license/mit */
 const CSS = `
 :root {
     --bg: #1e2126;
