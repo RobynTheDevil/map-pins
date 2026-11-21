@@ -2,33 +2,31 @@
 
 A map editor that runs in the browser from a local file. Load a map image, add your own icons,
 place them as markers and sort them into layers. Save the result as a PNG, or as a single HTML
-file that opens the map in the same editor.
+file with a copy of the editor
 
-It needs no install, server or build step. Open `index.html` to start.
+Some browsers may not support save-in-place.
+
+### [![monomoon-map.neocities.org](./images/sample.png)](https://monomoon-map.neocities.org)
+### [Try it out](https://monomoon-map.neocities.org)
 
 ## Features
 
-- Open any image as the map and crop it in the editor.
-- Add icons by picking files or dropping them on the window. The atlas splitter cuts apart
-  icons that come as one sheet.
-- Click to place the active icon as a marker and drag to move it. Each marker can carry a
-  label and its own size.
-- Show, hide and reorder layers by dragging, and gather them into groups. Each layer has its
-  own label settings: show or hide, size and offset.
-- Add image overlays to a layer to cover sections of the map while the layer is on.
-- Draw on the active layer with the pencil and eraser. Each tool keeps its own size.
-- Read mode hides the sidebar and keeps panning, zooming, layer toggles and drawing. Edit mode
-  has everything.
-- Import chosen layers from another Map Pins project. If the two maps are cropped
-  differently, the editor detects the offset between them.
-- Every change autosaves in the browser until you save.
+- **Map image.** Open any image as the map, and crop it in the editor.
+- **Custom icons.** Add icon images by picking files or dropping them on the window. Icons
+  that come as one sheet (an atlas) can be cut apart with the built-in atlas splitter.
+- **Markers.** Click to place the active icon. Drag to move. Add labels maybe if you want idk.
+- **Layers and groups.** Show or hide layers, drag them to reorder, ... uh, groups, group them up.
+- **Image overlays.** You can add images for layer overlays. opacity and tools todo 
+- **Pencil and eraser.** draw if you want
+- **Import layers.** Copy chosen layers from another project. If the two maps
+  are cropped differently, ~~good luck~~ I mean the offset between them is detected for you.
 
 ## Getting started
 
 1. Open `index.html` in Chrome or Edge.
 2. Click **Open map image** and choose your map.
 3. Add icons under **Icons**. Select one and click the map to place it.
-4. Click **Save** to write an HTML file you can open again later or send to someone.
+4. Click **Save** to write an HTML file you can open again later or send it to someone.
 
 ## Controls
 
@@ -47,9 +45,8 @@ It needs no install, server or build step. Open `index.html` to start.
 
 ## Saving
 
-- **Save** writes the current file, asking where the first time.
-- **Save As → HTML** writes one self-contained file holding the editor and your map. Any
-  browser opens it.
+- **Save** writes the current file, asking where the first time and maybe the second and third times too.
+- **Save As → HTML** save a copy of the editor packaged with your edits.
 - **Save As → PNG** writes a flat image of the map with visible layers, markers and labels.
 - **Open** loads a saved HTML file or a `.mappins.json` project.
 
