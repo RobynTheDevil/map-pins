@@ -61,6 +61,8 @@ header {
     align-items: center;
 }
 header .title { font-weight: 600; margin-right: 8px; }
+header .info { display: inline-grid; place-items: center; width: 22px; height: 22px; margin: 0 8px 0 -2px; border: 1px solid var(--line); border-radius: 50%; color: var(--muted); font: italic 600 13px Georgia, serif; text-decoration: none; }
+header .info:hover { color: var(--text); border-color: var(--accent); }
 header .spacer { flex: 1; }
 #zoom { color: var(--muted); min-width: 48px; text-align: right; font-variant-numeric: tabular-nums; }
 button, label.btn {
@@ -375,6 +377,7 @@ button.primary { background: var(--accent); border-color: var(--accent); color: 
 const MARKUP = `
 <header>
     <span class="title">Map Pins</span>
+    <a class="info" href="https://github.com/RobynTheDevil/map-pins" target="_blank" rel="noopener" title="Map Pins on GitHub: source, help and updates">i</a>
     <button id="openBtn" class="edit-only" title="Open a saved map (HTML or JSON)">Open</button>
     <input id="projFile" type="file" accept=".html,.htm,.json,text/html,application/json">
     <button id="saveBtn" class="edit-only" disabled title="Save to the current file (Ctrl+S)">Save</button>
